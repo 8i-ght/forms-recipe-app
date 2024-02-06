@@ -12,10 +12,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private userSub: Subscription;
 
   constructor(private dataStorageService: DataStorageService, private authService: AuthService) {}
-  
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
-  }
 
   ngOnInit() {
    this.userSub = this.authService.user.subscribe(user => {
@@ -37,7 +33,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.authService.logout();
   }
 
-  ngonDestroy() {
+  ngOnDestroy() {
     this.userSub.unsubscribe();
   }
 }
