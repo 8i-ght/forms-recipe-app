@@ -5,7 +5,6 @@ import { AuthInterceptorService } from "./auth/auth-interceptor.service";
 import { AuthGuard } from "./auth/auth.guard";
 import { RecipeService } from "./recipes/recipe.service";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
-import { LoggingService } from "./logging.service";
 
 @NgModule({
     providers: [ShoppingListService,

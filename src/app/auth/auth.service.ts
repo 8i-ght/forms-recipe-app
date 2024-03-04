@@ -135,13 +135,17 @@ export class AuthService {
       case 'EMAIL_EXISTS':
         errorMessage = 'This email exists already';
         break;
-      case 'EMAIL_NOT_FOUND':
-        errorMessage = 'This email does not exist.';
+      case 'INVALID_USER_CREDINTIALS':
+        errorMessage = 'Email/Password may be inncorrect.';
         break;
-      case 'INVALID_PASSWORD':
-        errorMessage = 'This password is not correct.';
+      case 'INVALID_LOGIN_CREDENTIALS':
+        errorMessage = 'Email/Password may be inncorrect.';
+        break;
+      case 'TOO_MANY_ATTEMPTS_TRY_LATER':
+        errorMessage = 'Too many attempts, try again later';
         break;
     }
+    console.log(errorRes.error.error.message)
     return throwError(errorMessage);
   }
 }

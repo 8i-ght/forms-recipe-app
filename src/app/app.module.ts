@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
-import { LoggingService } from './logging.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { LoggingService } from './logging.service';
     HttpClientModule,  
     SharedModule,
     CoreModule,
+    BrowserAnimationsModule
   ],
   providers: [
     // LoggingService
